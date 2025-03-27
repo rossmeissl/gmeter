@@ -1,0 +1,120 @@
+@font-face {
+  font-family: sevenSegment;
+  src: url(sevensegment.ttf);
+}
+
+@font-face {
+  font-family: industrial;
+  src: url(industrial.ttf);
+}
+
+body {
+  font-family: industrial;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    45deg,
+    #999 5%,
+    #fff 10%,
+    #ccc 30%,
+    #ddd 50%,
+    #ccc 70%,
+    #fff 80%,
+    #999 95%
+  );
+}
+
+h1 {
+  font-weight: normal;
+  font-size: 36px;
+  margin: 0 0 6px;
+}
+
+h2 {
+  font-weight: normal;
+  font-size: 18px;
+  margin: 0 0 6px;
+}
+
+button {
+  --r: 20px;
+  /* whatever values/units you want */
+  width: 250px;
+  height: 80px;
+  background: 
+    radial-gradient(50% var(--r) at 50% var(--r), #0003 99.99%, #0000 0),
+    rgb(135, 1, 1);
+  border-radius: 100% / calc(var(--r) * 2);
+  outline: none;
+  border: none;
+  perspective: 80px;
+  transition: all .2s;
+  user-select: noselect;
+}
+
+button:active {
+  height: 60px;
+}
+
+button span {
+  display: block;
+  position: relative;
+  top: -20px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  transform: rotate3d(1, 0, 0, 45deg);
+  font-size: 30px;
+  transition: all .2s;
+  user-select: noselect;
+}
+
+button:active span {
+  top: -10px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 120px;
+  margin-bottom: 100px;
+}
+
+button>div {
+  position: absolute;
+  width: 200px;
+  background: linear-gradient(
+    45deg,
+    #999 5%,
+    #fff 10%,
+    #ccc 30%,
+    #ddd 50%,
+    #ccc 70%,
+    #fff 80%,
+    #999 95%
+  );
+  padding: 4px;
+  left: 25px;
+  bottom: -80px;
+  pointer-events: none;
+  border-radius: 4px;
+}
+
+button div div {
+  height: 60px;
+  background: black;
+  color: transparent;
+  font-family: "sevenSegment";
+  font-size: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button:active div div {
+  color: red;
+}
